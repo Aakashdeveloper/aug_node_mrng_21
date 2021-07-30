@@ -1,0 +1,38 @@
+https://code.visualstudio.com/download
+https://nodejs.org/en/
+https://github.com/
+https://git-scm.com/downloads
+
+
+NodeJs
+
+Single Thread, Async, Non-Blocking I/O
+
+convert code => machine language
+engine V8
+open source    
+
+JSON
+> JavaScript Object Notation
+
+[
+    {
+        "name":"John",
+        "city":'Delhi'
+    },
+    {
+        "name":"Ankit",
+        "city":'London'
+    },
+    {
+        "name":"Nikita",
+        "city":'Paris'
+    }
+]
+
+Extenstion
+> Eslint
+> Tab Nine
+> Git History
+> Git Lens
+> vscode-icons
