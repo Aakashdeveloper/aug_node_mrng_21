@@ -36,3 +36,31 @@ Extenstion
 > Git History
 > Git Lens
 > vscode-icons
+
+
+package.json
+> Entry Point To the application
+> First file that starts with
+> MetaData (name, version, description)
+> Scripts(start,test,build)
+
+////////////////
+**Step To Generate Package.json
+////////////////////////////////
+*NodeJs must be installed in the system
+> go inside the folder using cmd/terminal
+> type npm init
+> answer all question
+> type "yes"
+
+////////////////////////////////
+npm init -y
+
+////////////////
+**Step To install package
+////////////////////////////////
+*NodeJs must be installed in the system
+> go inside the folder using cmd/terminal
+> type npm i packagename /npm install packagename / npm install packagename --save /
+    type npm i packagename@version
+>
