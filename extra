@@ -64,3 +64,10 @@ npm init -y
 > type npm i packagename /npm install packagename / npm install packagename --save /
     type npm i packagename@version
 >
+
+npm start
+npm run filename
+
+child process
+
+> 4 core

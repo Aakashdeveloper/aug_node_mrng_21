@@ -1,0 +1,16 @@
+{
+  "name": "staticapi",
+  "version": "1.0.0",
+  "description": "this is node static api",
+  "main": "fs.js",
+  "scripts": {
+    "start":"node staticapi.js",
+    "dev":"node http.js"
+  },
+  "keywords": [
+    "node",
+    "fs"
+  ],
+  "author": "nareshit",
+  "license": "ISC"
+}
