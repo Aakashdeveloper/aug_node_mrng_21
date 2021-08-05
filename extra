@@ -37,6 +37,8 @@ Extenstion
 > Git Lens
 > vscode-icons
 
+https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
 
 package.json
 > Entry Point To the application
@@ -71,3 +73,21 @@ npm run filename
 child process
 
 > 4 core
+
+
+local dependency  > npm i packagename
+dev dependency    > npm i packagename --save-dev
+
+global dependency  (start, build, compile, generate)
+
+# window
+> open cmd as administrator
+> npm i -g packagename
+
+#mac /linux
+> open terminal
+> sudo npm i -g packagename
+
+
+# Cd(continous development)
+> npm i -g nodemon
