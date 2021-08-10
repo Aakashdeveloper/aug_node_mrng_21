@@ -127,7 +127,7 @@ var products = [
     {
         "id": 12,
         "display_name":"Blue Demin",
-        "product_category": "Jeans",
+        "product_name": "Jeans",
         "category": "Fashion",
         "category_id": 1,
         "Price": 3000,
@@ -517,7 +517,7 @@ var products = [
 
 productRouter.route('/')
     .get(function(req,res){
-        res.send(products)
+        res.render('products',{title:'Products Page',products})
 })
 
 productRouter.route('/details')

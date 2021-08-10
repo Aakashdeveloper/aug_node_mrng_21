@@ -156,7 +156,8 @@ var restaurants = [{
 
 restaurantRouter.route('/')
     .get(function(req,res){
-        res.send(restaurants)
+		//res.send(restaurants)
+		res.render('restaurants',{title: 'Restaurants Page', data:restaurants})
     });
 
 restaurantRouter.route('/details')

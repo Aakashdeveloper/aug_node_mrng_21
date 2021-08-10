@@ -26,8 +26,8 @@ var category = [
 
 categoryRouter.route('/')
     .get(function(req, res){
-        res.send('<h1>Hii from Category</h1>')
-        // res.render()
+        // res.send('<h1>Hii from Category</h1>')
+        res.render('category',{title: 'Category Page', category:category})
     })
 
 module.exports = categoryRouter;
