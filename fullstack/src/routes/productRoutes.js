@@ -515,14 +515,28 @@ var products = [
     }
 ]
 
-productRouter.route('/')
+function router(menu){
+    productRouter.route('/')
     .get(function(req,res){
-        res.render('products',{title:'Products Page',products})
-})
+        res.render('products',{title:'Products Page',products,menu})
+    })
 
-productRouter.route('/details')
-    .get(function(req,res){
-        res.send('Products Details Page')
-})
+    productRouter.route('/category/:id')
+        .get(function(req,res){
+            // var id = req.params.id
+            var {id} = req.params
+            var name = req.query.name
+            res.send(`Products Via Category for id ${id} for name ${name}`)
+    })
 
-module.exports = productRouter
+    productRouter.route('/details/:id')
+        .get(function(req,res){
+            var id = req.params.id
+            res.send('Products Details Page for is ',id)
+    })
+
+    return productRouter
+}
+
+
+module.exports = router

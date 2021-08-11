@@ -24,12 +24,17 @@ var category = [
     }
 ]
 
-categoryRouter.route('/')
+function router(menu){
+    categoryRouter.route('/')
     .get(function(req, res){
         // res.send('<h1>Hii from Category</h1>')
-        res.render('category',{title: 'Category Page', category:category})
+        res.render('category',{title: 'Category Page', category:category,menu:menu})
     })
 
-module.exports = categoryRouter;
+    return categoryRouter
+}
+
+
+module.exports = router;
 
 

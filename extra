@@ -91,3 +91,33 @@ global dependency  (start, build, compile, generate)
 
 # Cd(continous development)
 > npm i -g nodemon
+
+////////////////////////////////
+params / somewhere we need to mention
+queryparams ? no need to mention
+
+
+
+function add(a,b){
+    return a+b
+}
+
+add(1,2)
+
+////////////////////////////////
+setup mongo
+////////////////////////////////
+> https://www.mongodb.com/try/download/community
+> install
+> in c drive make folder /data/db
+
+> open cmd go inside bin folder of mongo 
+c/programfile/mongodb/5.0/server/bin
+> type mongod
+(start the mongodb server on port 27017)
+
+
+> open second cmd
+> go inside bin
+> type mongo 
+(console to try your query)
