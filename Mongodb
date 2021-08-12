@@ -1,0 +1,24 @@
+>>> Create DB 
+use databasename
+
+>> go inside the database
+use databasename
+
+>>>> check all databases
+show dbs
+
+>>>> check all collections
+show collections
+
+db.first.insert({"name":"John"})
+db.first.insert({name:"John"})
+
+db.first.insert({_id:2,name:"Karan",city:'Delhi'})
+db.first.insert({_id:3,name:"Bhumika",city:'Paris'})
+db.first.insertMany([
+        {_id:2,name:"Karan",city:'Delhi'},
+        {_id:2,name:"Karan",city:'Delhi'}
+])
+
+db.first.find()
+{ "_id" : ObjectId("61147523554118a4c9847303"), "name" : "John" }

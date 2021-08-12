@@ -1,7 +1,5 @@
-var express = require('express');
-var productRouter = express.Router();
-
-var products = [
+db.products.insert(
+[
     {
         "_id": 1,
         "product_name": "Girls top",
@@ -513,30 +511,4 @@ var products = [
         "Color": "Black",
         "company": "Bajaj"
     }
-]
-
-function router(menu){
-    productRouter.route('/')
-    .get(function(req,res){
-        res.render('products',{title:'Products Page',products,menu})
-    })
-
-    productRouter.route('/category/:id')
-        .get(function(req,res){
-            // var _id = req.params._id
-            var {_id} = req.params
-            var name = req.query.name
-            res.send(`Products Via Category for id ${id} for name ${name}`)
-    })
-
-    productRouter.route('/details/:id')
-        .get(function(req,res){
-            var _id = req.params._id
-            res.send('Products Details Page for is ',id)
-    })
-
-    return productRouter
-}
-
-
-module.exports = router
+])

@@ -1,7 +1,4 @@
-var express = require('express');
-var restaurantRouter = express.Router();
-
-var restaurants = [{
+db.restaurants.insert([{
 	"_id" : "6360",
 	"name" : "Gulab",
 	"city" : "Delhi",
@@ -152,22 +149,4 @@ var restaurants = [{
 	"aggregate_rating" : "3.9",
     "min_price": "670",
 	"rating_text" : "Good"
-}]
-
-function router(menu){
-	restaurantRouter.route('/')
-    .get(function(req,res){
-		//res.send(restaurants)
-		res.render('restaurants',{title: 'Restaurants Page', data:restaurants,menu})
-    });
-
-	restaurantRouter.route('/details')
-    .get(function(req,res){
-        res.send('Restaurants Details Page')
-	})
-	
-	return restaurantRouter
-}
-
-
-module.exports = router;
+}])

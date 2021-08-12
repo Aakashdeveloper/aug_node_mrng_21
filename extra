@@ -121,3 +121,40 @@ c/programfile/mongodb/5.0/server/bin
 > go inside bin
 > type mongo 
 (console to try your query)
+
+
+Roll No | Hindi | English | Computer
+  1     | 80    |         |
+  2     |       | 80      | 
+  3     | 80    |         | 70
+
+
+var students = [
+   {
+       rollno:1,
+       Hindi: 80
+   },
+   {
+       rollno:2,
+       English: 80
+   },
+    {
+       rollno:3,
+       Hindi: 80,
+       Computer:70
+   }
+
+]
+
+
+Sql           NoSql
+-------------------------
+Database      Database
+Tables        Collections
+Row           Document
+Select        find
+Insert        Insert
+Update        Update
+Delete        Remove
+
+
