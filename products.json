@@ -512,3 +512,169 @@ db.products.insert(
         "company": "Bajaj"
     }
 ])
+
+
+db.products.insertMany(
+[
+
+    {
+        "_id": 34,
+        "product_name": "Men's Shirt",
+        "category": "Fashion",
+        "category_id": 1,
+        "Price": 1800,
+        "Size": "S",
+        "Image":  "https://i.ibb.co/02S5qLt/sm9.jpg" ,
+        "Color": "Blue-Ash",
+        "Brand": "Ajio"
+    },
+
+    {
+        "_id": 35,
+        "product_name": "Women's Jeans",
+        "category": "Fashion",
+        "category_id": 1,
+         "Price": 1000,
+        "Size": "M",
+        "Image":"https://i.ibb.co/k0mKWfx/wj7.jpg" ,
+        "Color": "BLue",
+        "Brand": "Lee"
+    },   
+
+    {
+        "_id": 36,
+        "product_name": "Women's Jeans",
+         "category": "Fashion",
+         "category_id": 1,
+        "Price": 1600,
+        "Size": "S",
+        "Image": "https://i.ibb.co/bF0JH6S/w9.jpg" ,
+        "Color": "BLack",
+        "Brand": "Levi's"
+    },
+    {
+        "_id": 37,
+        "product_name": "Women's Jeans",
+        "category": "Fashion",
+        "category_id": 1,
+        "Price": 2000,
+        "Size": "S",
+        "Image":  "https://i.ibb.co/M7Sg9DP/wj6.jpg" ,
+        "Color": "Sky Blue",
+        "Brand": "Tommy Hilfiger"
+
+    },
+    {
+        "_id": 39,
+        "product_name": "Women's Jeans",
+        "category": "Fashion",
+        "category_id": 1,
+        "Price": 2500,
+        "Size": "L",
+        "Image": "https://i.ibb.co/yBK9S07/wj2.jpg" ,
+        "Color": "Grey",
+        "Brand": "Calvin Klein"
+
+    },
+    
+     {
+        "_id": 40,
+        "product_name": "Washing Machine",
+        "category": "Electronics",
+        "category_id": 2,
+        "Price": 30000,
+        "Image": "https://i.ibb.co/8NQ7RpM/w2.jpg",
+        "Mode": "Semi-Automatic",
+        "Color": "White",
+        "company": "LG"
+    },
+    {
+        "_id":41 ,
+        "product_name": "Washing Machine",
+        "category": "Electronics",
+        "category_id": 2,
+        "Price": 15000,
+        "Image": "https://i.ibb.co/HdMwcHJ/w1.jpg",
+        "Mode": "Automatic",
+        "Color": "White",
+        "company": "Lloyd"
+    },
+    {
+        "_id":42 ,
+        "product_name": "Washing Machine",
+        "category": "Electronics",
+        "category_id": 2,
+        "Price": 15000,
+        "Image":"https://i.ibb.co/NrHbwwD/w3.jpg" ,
+        "Mode": "Automatic",
+        "Color": "Grey",
+        "company": "Lloyd"
+    },
+    {
+        "_id": 43,
+        "product_name": "Refrigerator",
+        "category": "Electronics",
+        "category_id": 2,
+        "Price": 50000,
+        "Image": "https://i.ibb.co/Tm1GmYc/w4.jpg",
+        "Style": "Double-Door",
+        "Color": "Metal Grey",
+        "company": "Samsung"
+    },
+    {
+        "_id": 44,
+        "product_name": "Refrigerator",
+        "category": "Electronics",
+        "category_id": 2,
+        "Price": 25000,
+        "Image":"https://i.ibb.co/zrLv8Bj/w5.jpg" ,
+        "style": "Single Door",
+        "Color": "Metal Black",
+        "company": "Whirlpool"
+    },
+    {
+        "_id": 45,
+        "product_name": "Iron",
+        "category": "Electronics",
+        "category_id": 2,
+        "Price": 3000,
+        "Image": "https://i.ibb.co/Tw9cXss/w6.jpg", 
+        "Color": "Blue",
+        "company": "Havells"
+    },
+    {
+        "_id": 46,
+        "product_name": "Iron",
+        "category": "Electronics",
+        "category_id": 2,
+        "Price": 4000,
+        "Image":"https://i.ibb.co/GHQjYvv/w7.jpg",
+        "Color": "Black",
+        "company": "Bajaj"
+    }
+])
+
+db.products.insertMany([
+    {
+        "_id":47,
+        "product_name": "Men's Shirt",
+        "category": "Essentials",
+        "category_id": 3,
+        "Price": 800,
+        "Size": "M",
+        "Image":"https://i.ibb.co/N6dtKNM/sm7.jpg" ,
+        "Color": "Black",
+        "Brand": "Park Avenue"
+    },
+     {
+        "_id": 48,
+        "product_name": "Men's Shirt",
+        "category": "Footwear",
+        "category_id": 4,
+        "Price": 1200,
+        "Size": "M",
+        "Image": "https://i.ibb.co/7bJHyHy/sm4.jpg" ,
+        "Color": "Fern",
+        "Brand": "Tomy Hilfiger"
+    }
+])

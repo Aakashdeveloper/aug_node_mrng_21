@@ -22,3 +22,7 @@ db.first.insertMany([
 
 db.first.find()
 { "_id" : ObjectId("61147523554118a4c9847303"), "name" : "John" }
+> db.products.find({Size:"Medium",color:"Blue"}).pretty()
+> db.products.find({Size:"Medium",Color:"Blue"}).pretty()
+> db.products.find({Size:"Medium"}).pretty()
+> db.products.find({_id:1})
