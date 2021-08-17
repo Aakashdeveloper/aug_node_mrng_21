@@ -1,7 +1,7 @@
 var express = require('express');
 var categoryRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
-var url = "mongodb://127.0.0.1:27017";
+var url = process.env.MongoUrl;
 
 function router(menu){
     categoryRouter.route('/')

@@ -1,6 +1,11 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 9001;
+var dotenv = require('dotenv');
+dotenv.config()
+var morgan = require('morgan');
+var chalk = require('chalk');
+var fs = require('fs');
+var port = process.env.PORT || 9000;
 
 var menu = [
     {link:'/', name:'Home'},
@@ -19,7 +24,8 @@ app.use(express.static(__dirname+'/public'));
 app.set('views','./src/views');
 // view engine
 app.set('view engine', 'ejs');
-
+//app.use(morgan('dev'))
+app.use(morgan('dev',{stream: fs.createWriteStream('./app.log',{flags:'a'})}))
 
 var data = [
     {
@@ -48,7 +54,7 @@ app.use('/category',categoryRouter);
 app.listen(port, function(err){
     if(err) throw err;
     else{
-        console.log("Server is running on port "+port)
+        console.log(chalk.yellow("Server is running on port "+port))
     }
 })
 

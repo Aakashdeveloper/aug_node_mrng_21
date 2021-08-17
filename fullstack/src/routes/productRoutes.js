@@ -1,7 +1,7 @@
 var express = require('express');
 var productRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
-var url = "mongodb://127.0.0.1:27017";
+var url = process.env.MongoUrl;
 
 function router(menu){
     productRouter.route('/')
@@ -34,8 +34,6 @@ function router(menu){
                     const dbo = dc.db('augnode');
                     
                     dbo.collection('products').find({category_id:Number(id)}).toArray(function(err, data){
-                        console.log(id)
-                        console.log(data)
                         if(err){
                             res.status(501).send("Error While Fetching")
                         }else{
@@ -48,8 +46,21 @@ function router(menu){
 
     productRouter.route('/details/:id')
         .get(function(req,res){
-            var _id = req.params._id
-            res.send('Products Details Page for is ',id)
+            var {id} = req.params
+            mongodb.connect(url, function(err, dc){
+                if(err){
+                    res.status(501).send("Error While Connecting")
+                }else{
+                    const dbo = dc.db('augnode');
+                    dbo.collection('products').findOne({_id:Number(id)},function(err, data){
+                        if(err){
+                            res.status(501).send("Error While Fetching")
+                        }else{
+                            res.render('productDetails',{title: 'Products Details', products:data,menu:menu})
+                        }
+                    })
+                }
+            })
     })
 
     return productRouter
