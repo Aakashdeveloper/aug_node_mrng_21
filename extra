@@ -3,6 +3,40 @@ https://nodejs.org/en/
 https://github.com/
 https://git-scm.com/downloads
 
+Basic JavaScript
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+////////////
+Third Party Api (Weather Api)
+Redis  > 6379
+
+Node-Es6(.babel)
+MongoDb Basic >27017  (local/cloud)
+ImageUpload
+Api with NodeJS(Rest)>1
+Swagger
+DashBoard(Crud)
+Testing
+Email With Node(sendgird)(https://app.sendgrid.com/)
+Login/Logout(JWT)
+Oauth(with github)
+NodeJs with postgres
+Oauth(with google)
+Github
+--Deployment---
+Docker
+Heroku
+Nginx
+Pm2
+GraphQl API
+Paytm-Payment
+Chatapp
+FIREBASE
+--------NOT---------
+React/Angular
+Html/css/jquery
+
 
 NodeJs
 
