@@ -8,8 +8,9 @@ NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
-////////////
 Redis  > 6379
+////////////
+
 Node-Es6(.babel)
 MongoDb Basic >27017  (local/cloud)
 ImageUpload
@@ -193,3 +194,12 @@ Update        Update
 Delete        Remove
 
 http://api.openweathermap.org/data/2.5/forecast/daily?q=Delhi&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29
+
+////////
+redis-server
+redis-cli 
+
+KEYS *
+set key value
+get key
+del key
