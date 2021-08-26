@@ -26,3 +26,48 @@ db.first.find()
 > db.products.find({Size:"Medium",Color:"Blue"}).pretty()
 > db.products.find({Size:"Medium"}).pretty()
 > db.products.find({_id:1})
+
+ db.products.find({product_name:"Jeans"}).sort({Price:1}).pretty()
+db.products.find({product_name:"Jeans"}).sort({Price:-1}).limit(2).pretty()
+
+
+db.products.find({Price:{$lt:1500,$gt:1000}}).sort({Price:1}).pretty()
+
+
+db.products.find({product_name:{$in:['Jeans','Refrigerator']}}).pretty()
+
+///////update////////////////////////////////
+
+> db.test.insert([
+        {_id:1,name:'Bhumika',class:'Node'},
+        {_id:2,name:'Karan',class:'UI'},
+        {_id:3,name:'Aakash',class:'GoLang'}  
+])
+
+
+db.test.update(
+        {_id:1},
+        {
+           $set:{
+              name:'TestName',
+              class:'React'
+           }
+        },
+)
+
+
+db.test.update(
+        {name:'Jeans'},
+        {
+           $set:{
+              name:'TestName',
+              class:'React'
+           }
+        },
+        {multi:true}
+)
+
+
+////////delete////////////////////////////////
+db.test.remove({}) /// remove all records
+db.test.remove({_id:2})

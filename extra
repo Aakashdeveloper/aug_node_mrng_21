@@ -11,8 +11,8 @@ Third Party Api (Weather Api)
 Redis  > 6379
 Node-Es6(.babel)
 ImageUpload
-////////////
 MongoDb Basic >27017  (local/cloud)
+////////////
 Api with NodeJS(Rest)>1
 Swagger
 DashBoard(Crud)
@@ -203,3 +203,6 @@ get key
 del key
 
 npm i @babel/core @babel/preset-env @babel/register
+
+CRUD
+Create Read Update Delete
