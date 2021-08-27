@@ -206,3 +206,8 @@ npm i @babel/core @babel/preset-env @babel/register
 
 CRUD
 Create Read Update Delete
+
+cors
+cross origin resource sharing
+
+https://www.postman.com/downloads/
