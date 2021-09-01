@@ -7,7 +7,13 @@ const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mongourl = process.env.LocalDB;
+const mongoUrl = process.env.LocalDB;
+const swaggerUi = require('swagger-ui-express');
+const package = require('./package.json');
+const swaggerDocument = require('./swagger.json');
+
+swaggerDocument.info.version = package.version;
+app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 let db;
 let col_name="restapi";
@@ -16,6 +22,11 @@ let col_name="restapi";
 app.use(bodyParser.urlencoded({ extended:true}));
 app.use(bodyParser.json());
 app.use(cors());
+
+// healthCheck
+app.get('/',(req,res) => {
+    res.status(200).send("Health Ok")
+});
 
 // healthCheck
 app.get('/health',(req,res) => {
@@ -122,7 +133,7 @@ app.put('/activate',(req,res) =>{
 
 
 //DB Connection
-MongoClient.connect(mongourl,(err,client) => {
+MongoClient.connect(mongoUrl,(err,client) => {
     if(err) console.log('Error while connecting');
     db = client.db('augnode');
     app.listen(port,(err) => {

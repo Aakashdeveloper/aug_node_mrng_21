@@ -1,0 +1,167 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "The Swagger API",
+        "version": "__version__"
+    },
+    "tags": [
+        {
+            "name": "PUBLIC ROUTE",
+            "description": "PUBLIC ROUTE"
+        }
+    ],
+    "paths": {
+        "/health":{
+            "summary":"Testing Health",
+            "get": {
+                "description": "Testing Health Check",
+                "tags": ["PUBLIC ROUTE"],
+                "responses":{
+                    "200": {
+                        "description": "Health Check Work Fine"
+                    }
+                }
+            }
+        },
+        "/users":{
+            "summary":"Getting All Users",
+            "get": {
+                "description": "Getting User Info",
+                "tags": ["PUBLIC ROUTE"],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "choose role as Admin or user"
+                    },
+                    {
+                        "in": "query",
+                        "name": "city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Enter City Name"
+                    }
+                ],
+                "responses":{
+                    "200": {
+                        "description": "Getting User Info"
+                    }
+                }
+            }
+        },
+        "/user/{id}":{
+            "summary":"Getting Particular Users",
+            "get": {
+                "description": "Getting Particular User Info",
+                "tags": ["PUBLIC ROUTE"],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "required": true,
+                        "description": "Id of the user ex: 612d80d11dda1d6e98b21ad9"
+                    }
+                ],
+                "responses":{
+                    "200": {
+                        "description": "Getting User Info"
+                    }
+                }
+            }
+        },
+        "/addUser":{
+            "summary":"Add New User",
+            "post": {
+                "description": "Add new User",
+                "tags": ["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "name": "Aman",
+                                "city": "Delhi",
+                                "phone": 87676775,
+                                "role": "User",
+                                "isActive": true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200": {
+                        "description": "Getting User Info"
+                    }
+                }
+            }
+        },
+        "/updateUser":{
+            "summary":"Update User",
+            "put": {
+                "description": "Update User",
+                "tags": ["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "612ed5526d39833c26f1ac92",
+                                "name": "Aman",
+                                "city": "Delhi",
+                                "phone": 87676775,
+                                "role": "User",
+                                "isActive": true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200": {
+                        "description": "User Updated"
+                    }
+                }
+            }
+        },
+        "/deleteUser":{
+            "summary":"Delete User",
+            "delete": {
+                "description": "Delete User",
+                "tags": ["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "612ed5526d39833c26f1ac92"
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200": {
+                        "description": "User Deleted"
+                    }
+                }
+            }
+        }
+    }
+}
