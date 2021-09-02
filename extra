@@ -14,25 +14,25 @@ ImageUpload
 MongoDb Basic >27017  (local/cloud)
 Api with NodeJS(Rest)>1
 Swagger
-////////////
 DashBoard(Crud)
 Testing
-
-Email With Node(sendgird)(https://app.sendgrid.com/)
-Login/Logout(JWT)
-Oauth(with github)
-NodeJs with postgres
-Oauth(with google)
+////////////
 Github
 --Deployment---
 Docker
 Heroku
 Nginx
 Pm2
+
+Login/Logout(JWT)
+Oauth(with github)
+NodeJs with postgres
+Oauth(with google)
 GraphQl API
 Paytm-Payment
 Chatapp
 FIREBASE
+Email With Node(sendgird)(https://app.sendgrid.com/)
 --------NOT---------
 React/Angular
 Html/css/jquery

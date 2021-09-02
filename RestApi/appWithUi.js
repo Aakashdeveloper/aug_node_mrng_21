@@ -8,13 +8,6 @@ const MongoClient = mongo.MongoClient;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoUrl = process.env.LocalDB;
-const swaggerUi = require('swagger-ui-express');
-const package = require('./package.json');
-const swaggerDocument = require('./swagger.json');
-
-swaggerDocument.info.version = package.version;
-app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-
 let db;
 let col_name="restapi";
 
@@ -22,10 +15,25 @@ let col_name="restapi";
 app.use(bodyParser.urlencoded({ extended:true}));
 app.use(bodyParser.json());
 app.use(cors());
+// static File Path
+app.use(express.static(__dirname+'/public'));
+// html file path
+app.set('views','./src/views');
+// view engine
+app.set('view engine', 'ejs');
 
-// healthCheck
+
+// Main Route
 app.get('/',(req,res) => {
-    res.status(200).send("Health Ok")
+    db.collection(col_name).find({isActive:true}).toArray((err,result) => {
+        if(err) throw err;
+        res.render('index',{data:result})
+    })
+});
+
+// Add new items
+app.get('/new',(req,res) => {
+    res.render('admin')
 });
 
 // healthCheck
@@ -64,9 +72,17 @@ app.get('/user/:id',(req,res) =>{
 //Post
 app.post('/addUser',(req,res) => {
     console.log(req.body)
-    db.collection(col_name).insert(req.body,(err,result) => {
+    const data = {
+        "name": req.body.name,
+        "city": req.body.city,
+        "phone": req.body.phone,
+        "isActive": true,
+        "role": req.body.role?req.body.role:"User",
+
+    }
+    db.collection(col_name).insert(data,(err,result) => {
         if(err) throw err;
-        res.status(200).send('Data Added')
+        res.redirect('/')
     })
 })
 
