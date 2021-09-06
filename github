@@ -1,0 +1,27 @@
+// firsttime from new folder
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/nodeaug.git
+git push -u origin master
+
+// Next All time from same folder
+git add .
+git commit -m "Change port"
+git push
+
+/////branches///////
+>>>>New Branch 
+git checkout -b branchname
+
+git branch  
+
+>>> switch branch
+git checkout branchname
+
+git add .
+git commit -m "Change port"
+git push origin branchname
+
+git clone path
