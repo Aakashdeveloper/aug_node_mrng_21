@@ -16,14 +16,13 @@ Api with NodeJS(Rest)>1
 Swagger
 DashBoard(Crud)
 Testing
-////////////
 Github
 --Deployment off app---
 Docker
 Heroku
 Nginx
 Pm2
-
+////////////
 Login/Logout(JWT)
 Oauth(with github)
 NodeJs with postgres
@@ -213,3 +212,12 @@ cross origin resource sharing
 https://www.postman.com/downloads/
 
 https://git-scm.com/downloads
+
+//Pm2
+npm i -g pm2
+pm2 start filename
+pm2 status
+pm2 stop appname
+
+
+npm i jsonwebtoken mongoose bcryptjs body-parser cors express

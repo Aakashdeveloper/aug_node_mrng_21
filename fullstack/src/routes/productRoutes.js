@@ -1,7 +1,7 @@
 var express = require('express');
 var productRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
-var url = process.env.MongoUrl;
+var url = process.env.LiveMongo;
 
 function router(menu){
     productRouter.route('/')
