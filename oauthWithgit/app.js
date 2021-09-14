@@ -26,6 +26,23 @@ app.get('/user',(req,res) => {
             client_secret:'5517aea7d67312d4c092957b12d4d2668b4594f9',
             code:code
         })
+        .set('Accept','application/json')
+        .end((err,result) => {
+            if(err) throw err;
+            var acctoken = result.body.access_token;
+            const option = {
+                url:'https://api.github.com/user',
+                method:'GET',
+                headers:{
+                    'Accept':'application/json',
+                    'Authorization':`token ${acctoken}`,
+                    'User-Agent':'mycode'
+                }
+            }
+            request(option,(err,response,body) => {
+                res.send(body)
+            })
+        })
 })
 
 app.listen(port,() => {
