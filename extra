@@ -24,12 +24,12 @@ Nginx
 Pm2
 Login/Logout(JWT)
 Oauth(with github)
-////////////
 Oauth(with google)
 NodeJs with postgres
-
+////////////
 GraphQl API
 Paytm-Payment
+
 Chatapp
 FIREBASE
 Email With Node(sendgird)(https://app.sendgrid.com/)
