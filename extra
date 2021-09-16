@@ -227,3 +227,18 @@ https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth
 npm i cors ejs superagent request express
 
 npm i ejs express express-session passport passport-google-oauth
+
+//dummyapi
+
+> npm i -g json-server
+
+> json-server --watch filename --port 7798
+
+
+{
+  Movies(id:1){
+    name,
+    language,
+    imageUrl
+  }
+}
