@@ -26,13 +26,12 @@ Login/Logout(JWT)
 Oauth(with github)
 Oauth(with google)
 NodeJs with postgres
-////////////
 GraphQl API
 Paytm-Payment
-
+Email With Node(sendgird)(https://app.sendgrid.com/)
+////////////
 Chatapp
 FIREBASE
-Email With Node(sendgird)(https://app.sendgrid.com/)
 --------NOT---------
 React/Angular
 Html/css/jquery
@@ -242,3 +241,8 @@ npm i ejs express express-session passport passport-google-oauth
     imageUrl
   }
 }
+
+
+echo "export SENDGRID_API_KEY='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'" > sendgrid.env
+echo "sendgrid.env" >> .gitignore
+source ./sendgrid.env
