@@ -29,7 +29,6 @@ NodeJs with postgres
 GraphQl API
 Paytm-Payment
 Email With Node(sendgird)(https://app.sendgrid.com/)
-////////////
 Chatapp
 FIREBASE
 --------NOT---------
@@ -246,3 +245,9 @@ npm i ejs express express-session passport passport-google-oauth
 echo "export SENDGRID_API_KEY='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'" > sendgrid.env
 echo "sendgrid.env" >> .gitignore
 source ./sendgrid.env
+
+//////////
+npm i -g firebase-tools
+firebase login
+firebase init
+firebase deploy
